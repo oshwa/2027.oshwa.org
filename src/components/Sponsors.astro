@@ -1,0 +1,151 @@
+---
+import Sponsor from "./Sponsor.astro";
+import SponsorGroup from "./SponsorGroup.astro";
+---
+
+<section class="sponsors">
+    <h2>Sponsors</h2>
+
+    <SponsorGroup name="Fanatic sponsors" columns={1}>
+        <Sponsor
+            name="Thingiverse"
+            url="https://www.thingiverse.com/"
+            image="thingiverse.png"
+        />
+        <Sponsor
+            name="seeedstudio"
+            url="https://www.seeedstudio.com/"
+            image="seeed.png"
+        />
+    </SponsorGroup>
+
+    <SponsorGroup name="Enthusiast sponsors" columns={2}>
+        <Sponsor
+            name="Pro² Network"
+            url="https://prosquared.org"
+            image="pro2network.webp"
+        />
+        <Sponsor
+            name="CrowdSupply"
+            url="https://crowdsupply.com"
+            image="crowdsupply.webp"
+        />
+        <Sponsor
+            name="Hackster"
+            url="https://hackster.io"
+            image="hackster.webp"
+        />
+        <Sponsor
+            name="Jumperless"
+            url="https://docs.jumperless.org"
+            image="jumperless.svg"
+        />
+        <Sponsor
+            name="Era Labs"
+            url="https://era.world/"
+            image="Era-Lockup-Color.png"
+        />
+        <Sponsor
+            name="Arduino"
+            url="https://www.arduino.cc/"
+            image="arduino.webp"
+        />
+    </SponsorGroup>
+
+    <SponsorGroup name="Supporting sponsors" columns={3}>
+        <Sponsor
+            name="Umorpha Systems"
+            url="https://www.umorpha.io/"
+            image="umorpha.webp"
+        />
+        <Sponsor
+            name="OpenHVAC"
+            url="https://openhvac.io"
+            image="openhvac.webp"
+        />
+        <Sponsor
+            name="iFixit"
+            url="https://ifixit.com"
+            image="ifixit.webp"
+        />
+        <Sponsor
+            name="SparkFun"
+            url="https://sparkfun.com"
+            image="sparkfun.webp"
+        />
+        <Sponsor
+            name="AirGradient"
+            url="https://www.airgradient.com/"
+            image="airgradient.png"
+        />
+    </SponsorGroup>
+
+    <SponsorGroup name="Community sponsors" columns={3}>
+        <Sponsor name="Varro" url="https://varrobio.com" image="varro.webp" />
+        <Sponsor
+            name="LDO Motors"
+            url="https://ldomotors.com"
+            image="ldomotors.webp"
+        />
+        <Sponsor
+            name="SK Electronics"
+            url="https://kazarians.dev"
+            image="skelectronics.webp"
+        />
+        <Sponsor name="Aisler" url="https://aisler.net" image="aisler.png" />
+        <Sponsor
+            name="Oddly Specific Objects"
+            url="https://oddlyspecificobjects.com"
+            image="oddlyspecificobjects.png"
+        />
+        <Sponsor name="OSE" url="https://ose-germany.de" image="ose.png" />
+        <Sponsor name="Olimex" url="https://olimex.com" image="olimex.webp" />
+        <Sponsor
+            name="Pulse Sensor"
+            url="https://pulsesensor.com"
+            image="pulsesensor.webp"
+        />
+        <Sponsor
+            name="Framework"
+            url="https://frame.work"
+            image="framework.webp"
+        />
+        <Sponsor
+            name="BeagleBoard"
+            url="https://www.beagleboard.org/"
+            image="beagleboard.webp"
+        />
+        <Sponsor
+            name="Silicon Valley Robotics"
+            url="https://www.svrobo.org/"
+            image="svrobotics.webp"
+        />
+        <Sponsor
+            name="PCBWay"
+            url="https://www.pcbway.com/"
+            image="pcbway.webp"
+        />
+        <Sponsor
+            name="Pimoroni"
+            url="https://shop.pimoroni.com/"
+            image="pimoroni.webp"
+        />
+        <Sponsor
+            name="School of Machines"
+            url="https://www.schoolofma.org/"
+            image="SM.png"
+    </SponsorGroup>
+</section>
+
+<style>
+    .sponsors {
+        margin-top: 4rem;
+        width: 100%;
+        max-width: min(600px, 80%);
+        margin-inline: auto;
+
+        > h2 {
+            display: none;
+        }
+    }
+</style>

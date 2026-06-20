@@ -1,0 +1,12 @@
+---
+import type { ComponentProps } from "astro/types";
+import Basic from "./Basic.astro";
+
+type Props = ComponentProps<typeof Basic>;
+
+let { title, description } = { ...Astro.props, ...Astro.props.frontmatter };
+---
+
+<Basic title={title} description={description} contentClass="page">
+    <slot />
+</Basic>

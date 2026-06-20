@@ -1,0 +1,93 @@
+---
+import config from "@metadata";
+import { toTitleCase } from "remeda";
+import Basic from "./Basic.astro";
+import AddToCalendar from "@components/AddToCalendar.astro";
+import DateSpan from "@components/DateSpan.astro";
+
+interface Props {
+    event: {
+        id: string;
+        collection: string;
+        data: {
+            title: string;
+            start?: string;
+            end?: string;
+            location?: string;
+            description?: string;
+            register?: string;
+        };
+    };
+}
+
+const { event } = { ...Astro.props };
+const { collection, id } = event;
+const { title, start, end, location, description, register } = event.data;
+
+const collectionName = toTitleCase(collection);
+---
+
+<Basic title={`${title} | ${collectionName}`} contentClass={collection}>
+    <div class="event">
+        <h1 class="event-title">{title}</h1>
+        {
+            (start && end) && (
+                <div class="event-time">
+                    <DateSpan start={start} end={end} />
+                    <AddToCalendar
+                        title={`${title} | ${config.title.short}`}
+                        start={start}
+                        end={end}
+                        location={location}
+                        details={description}
+                    />
+                </div>
+            )
+        }
+        <div class="event-info">
+            {location && <span class="event-location">{location}</span>}
+            {
+                register && (
+                    <a class="register" href={register} target="_blank">
+                        Register
+                    </a>
+                )
+            }
+        </div>
+        <div class="event-content">
+            <slot />
+        </div>
+    </div>
+</Basic>
+
+<style>
+    .event {
+        .event-title {
+            font-family: var(--ohs-family-text);
+            font-weight: normal;
+        }
+        .event-time {
+            display: flex;
+            align-items: center;
+            line-height: var(--title-line-height);
+
+            .date-span {
+                flex: 1;
+                font-size: var(--bulma-size-5);
+            }
+        }
+        .event-info {
+            display: flex;
+            align-items: center;
+
+            .event-location {
+                flex: 1;
+                font-size: var(--bulma-size-5);
+            }
+        }
+
+        .event-content {
+            margin-top: 2rem;
+        }
+    }
+</style>

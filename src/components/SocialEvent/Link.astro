@@ -1,0 +1,17 @@
+---
+interface Props {
+    url: string;
+}
+
+const { url } = Astro.props;
+---
+
+<a class="link" href={url} target="_blank">
+    <slot></slot>
+</a>
+
+<style>
+.link {
+    --drop-highlight-color: var(--ohs-color-sunflower);
+}
+</style>

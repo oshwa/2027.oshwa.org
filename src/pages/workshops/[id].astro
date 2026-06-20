@@ -1,0 +1,21 @@
+---
+import Presenter from "@components/Presenter.astro";
+import Event from "@layouts/Event.astro";
+import { getCollection, render } from "astro:content";
+import LightningTalk from "@components/LightningTalk.astro";
+
+export async function getStaticPaths() {
+    const workshops = await getCollection("workshops");
+    return workshops.map((workshop) => ({
+        params: { id: workshop.id },
+        props: { workshop },
+    }));
+}
+
+const { workshop } = Astro.props;
+const { Content } = await render(workshop);
+---
+
+<Event event={workshop}>
+    <Content components={{ Presenter, LightningTalk }} />
+</Event>

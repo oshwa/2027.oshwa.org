@@ -1,0 +1,181 @@
+---
+import * as DateTime from "../datetime";
+import { getCollection } from "astro:content";
+import Basic from "@layouts/Basic.astro";
+import Date from "@components/Date.astro";
+
+const workshops = (await getCollection("workshops")).sort((a, b) =>
+    DateTime.sorter(a.data.start, b.data.start),
+).map((workshop) => ({
+    ...workshop,
+    data: {
+        ...workshop.data,
+        start: DateTime.parse(workshop.data.start),
+        end: DateTime.parse(workshop.data.end),
+    },
+    isContinuation: false,
+}));
+
+// const locations = Array.from(
+//     new Set(workshops.map((workshop) => workshop.data.location || "TBD")),
+// ).sort();
+// TODO: Remove this being hardcoded
+const locations = [
+    "Musli",
+    "Spargel",
+    "Currywurst",
+    "Fleischsalat",
+    "Dinkelbrot",
+    "Doner",
+]
+
+const startTimesMap = new Map(
+    workshops.map((workshop) => [workshop.data.start.unix(), workshop.data.start]),
+);
+const startTimesSortedKeys = Array.from(startTimesMap.keys()).sort();
+
+const indexedWorkshops: Record<
+    string,
+    Record<string, (typeof workshops)[0] | null>
+> = Object.fromEntries(
+    startTimesSortedKeys.map((startTimeKey) => [
+        startTimeKey,
+        Object.fromEntries(locations.map((location) => [location, null])),
+    ]),
+);
+
+for (const workshop of workshops) {
+    const startTimeKey = workshop.data.start.unix();
+    indexedWorkshops[startTimeKey][workshop.data.location ?? "TBD"] =
+        workshop;
+
+    // Fill in placeholders if this event spans multiple time slots
+    const endTimeKey = workshop.data.end.unix();
+    for (const otherStartTimeKey of startTimesSortedKeys) {
+        if (otherStartTimeKey > startTimeKey && otherStartTimeKey < endTimeKey) {
+            indexedWorkshops[otherStartTimeKey][workshop.data.location ?? "TBD"] = {
+                ...workshop,
+                isContinuation: true,
+            };
+        }
+    }
+}
+---
+
+<Basic
+    title="Workshops"
+    description="Workshop schedule"
+    contentClass="workshops"
+>
+    <h1>Workshops</h1>
+    <p>
+        Workshops are on <strong>Sunday, May 24th</strong>.
+    </p>
+
+    <div class="schedule fixed-grid has-6-cols">
+        <div class="grid">
+            {locations.map((location) => <h2>{location}</h2>)}
+            {
+                startTimesSortedKeys.map((startTimeKey) => (
+                    <>
+                        <div class="time">
+                            <Date date={startTimesMap.get(startTimeKey)!} format={"h:mm A"} />
+                        </div>
+                        {locations.map((location) => {
+                            const workshop =
+                                indexedWorkshops[startTimeKey][location];
+
+                            if (!workshop) {
+                                return <div class="event is-empty"></div>;
+                            }
+
+                            const isBreak = workshop.data.break ?? false;
+                            const isPlaceholder =
+                                workshop.data.placeholder ?? false;
+                            const hasLink = !isBreak && !isPlaceholder;
+                            const isContinuation = workshop.isContinuation;
+
+                            return (
+                                <div
+                                    class="event"
+                                    class:list={{
+                                        "is-break": isBreak,
+                                        "is-placeholder": isPlaceholder,
+                                    }}
+                                >
+                                    {hasLink ? (
+                                        <a
+                                            href={`/workshops/${workshop.id ?? ""}`}
+                                        >
+                                            {isContinuation ? "(continued)" : workshop.data.title}
+                                        </a>
+                                    ) : (
+                                        <span>{workshop.data.title}</span>
+                                    )}
+                                </div>
+                            );
+                        })}
+                    </>
+                ))
+            }
+        </div>
+    </div>
+</Basic>
+
+<style>
+    .schedule {
+        margin-top: 2rem;
+
+        overflow-x: auto;
+
+        .grid {
+            width: 960px;
+            row-gap: 0.5rem;
+            column-gap: 0.5rem;
+            grid-template-columns: repeat(6, 1fr);
+        }
+
+        h2 {
+            margin-top: 0 !important;
+            margin-bottom: 1rem;
+            font-family: var(--ohs-family-text);
+            font-weight: normal;
+        }
+
+        .time {
+            text-align: center;
+            font-size: var(--bulma-size-6);
+            font-weight: bold;
+            grid-column: 1 / 7;
+            background: color-mix(
+                in srgb,
+                var(--ohs-color-mixed-green) 40%,
+                transparent
+            );
+        }
+
+        .event {
+            font-size: var(--bulma-size-6);
+            background: color-mix(
+                in srgb,
+                var(--ohs-color-aqua) 40%,
+                transparent
+            );
+
+            &.is-break {
+                text-align: center;
+            }
+
+            &> * {
+                display: block;
+                width: 100%;
+                height: 100%;
+                padding-inline: 0.25rem;
+            }
+
+            a {
+                --drop-highlight-color: transparent;
+            }
+        }
+    }
+</style>

@@ -1,0 +1,11 @@
+// @ts-check
+import { defineConfig } from "astro/config";
+import { default as editLink } from "./plugins/edit-link/integration";
+
+import mdx from "@astrojs/mdx";
+
+// https://astro.build/config
+export default defineConfig({
+    site: "https://2027.oshwa.org",
+    integrations: [editLink(), mdx()],
+});

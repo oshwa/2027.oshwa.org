@@ -1,0 +1,20 @@
+---
+import Presenter from "@components/Presenter.astro";
+import Event from "@layouts/Event.astro";
+import { getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+    const talks = await getCollection("talks");
+    return talks.map((talk) => ({
+        params: { id: talk.id },
+        props: { talk },
+    }));
+}
+
+const { talk } = Astro.props;
+const { Content } = await render(talk);
+---
+
+<Event event={talk}>
+    <Content components={{ Presenter }} />
+</Event>
