@@ -3,9 +3,9 @@ layout: "@layouts/Page.astro"
 title: Attend
 ---
 
-# Attend OHS 2026
+# Attend OHS2027
 
-Open Hardware Summit takes place on **May 23rd & 24th, 2026**.
+Open Hardware Summit takes place on **May 7th & 8th, 2027**.
 
 Tickets are available [here][get tickets], from as low as 0 dollars for virtual!
 You can [sign up for our newsletter][newsletter], or [drop us an email][email].
@@ -18,9 +18,9 @@ We'll have a student and reduced rate for in-person attendees if needed, please 
 
 ## Location
 
-Both days will take place at **Technische Universität Berlin** (TU Berlin) at the main campus, mathematics building, Straße des 17. Juni 136 10623 Berlin
+Both days will take place at **BAU** (BAU College of Art and Design of Barcelona) 
 
-Social events and other gatherings will happen at different locations **Friday May the 22nd, Saturday the 23rd and Sunday the 24th.** Be sure to check the Schedule page for more information.
+Social events and other gatherings will happen at different locations **Thursday May the 6th, Friday the 7th and Saturday the 8th.** Be sure to check the Schedule page for more information.
 
 ## Virtual
 
