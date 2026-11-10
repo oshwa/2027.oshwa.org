@@ -82,7 +82,7 @@
         var(--drop-highlight-color, var(--ohs-color-aqua)) 50%,
         transparent
     );
-    background-color: transparent;
+    background-color: #FFEEB7;
     background-image: linear-gradient(var(--ds-bg), var(--ds-bg));
     background-size: 100% 100%;
     background-position: var(--ds-left) var(--ds-top);
