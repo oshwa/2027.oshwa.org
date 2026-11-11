@@ -4,13 +4,12 @@
 
 /* Fonts */
 
-@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Megrim&display=swap");
-
+@import "/styles/BoldPixels.ttf"; "styles/lora.regular.ttf";
 /* Global variables */
 
 :root {
-    --ohs-family-display: "Megrim", serif;
-    --ohs-family-text: "Inconsolata", monospace;
+    --ohs-family-display: "BoldPxels.ttf", serif;
+    --ohs-family-text: "lora.regular.ttf", monospace;
 
     --ohs-color-text: #222;
     --ohs-color-pink: #EC008C;
