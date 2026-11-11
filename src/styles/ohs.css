@@ -77,7 +77,7 @@
 .content a {
     --ds-left: 0.05em;
     --ds-top: 0.4em;
-    --ds-bg: color-mix(
+    --ds-bg: color-mix(0)
         in srgb,
         var(--drop-highlight-color, var(--ohs-color-pink) 50%,
         transparent
