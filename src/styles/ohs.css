@@ -43,18 +43,18 @@
     h4,
     h5,
     h6 {
-        --drop-highlight-color: var(--ohs-color-sunflower);
+        --drop-highlight-color: var(--ohs-color-darkbeige);
         font-family: var(--ohs-family-display);
     }
 
     strong {
-        --drop-highlight-color: var(--ohs-color-mixed-green);
+        --drop-highlight-color: var(--ohs-color-blue);
         color: var(--ohs-color-text);
         font-weight: normal;
     }
 
     a {
-        --drop-highlight-color: var(--ohs-color-aqua);
+        --drop-highlight-color: var(--ohs-color-pink;
         color: var(--ohs-color-text);
     }
 
@@ -79,7 +79,7 @@
     --ds-top: 0.4em;
     --ds-bg: color-mix(
         in srgb,
-        var(--drop-highlight-color, var(--ohs-color-aqua)) 50%,
+        var(--drop-highlight-color, var(--ohs-color-pink) 50%,
         transparent
     );
     background-color: #FFEEB7;
@@ -89,15 +89,15 @@
     background-repeat: no-repeat;
     box-shadow: var(--ds-left) var(--ds-top) var(--ds-bg);
 
-    &.is-aqua {
-        --drop-highlight-color: var(--ohs-color-aqua);
+    &.is-pink {
+        --drop-highlight-color: var(--ohs-color-pink);
     }
 
-    &.is-green {
-        --drop-highlight-color: var(--ohs-color-mixed-green);
+    &.is-blue {
+        --drop-highlight-color: var(--ohs-color-blue);
     }
 
-    &.is-sunflower {
-        --drop-highlight-color: var(--ohs-color-sunflower);
+    &.is-darkbeige {
+        --drop-highlight-color: var(--ohs-color-darkbeige);
     }
 }
