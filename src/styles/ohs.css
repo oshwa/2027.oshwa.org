@@ -54,7 +54,7 @@
     }
 
     a {
-        --drop-highlight-color: var(--ohs-color-pink;
+        --drop-highlight-color: var(--ohs-color-pink);
         color: var(--ohs-color-text);
     }
 
