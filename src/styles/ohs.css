@@ -2,19 +2,36 @@
 
 @import "/styles/bulma.min.css";
 
-/* Fonts */
+/* Fonts (files live in public/styles/) */
 
-@import ("/styles/BoldPixels.ttf"); ("/styles/lora.regular.ttf");
+@font-face {
+    font-family: "BoldPixels";
+    src: url("/styles/BoldPixels.ttf") format("truetype");
+    /* Cover normal + bold so browsers don't fake-bold the pixel font */
+    font-weight: 400 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lora";
+    src: url("/styles/lora.regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* Global variables */
 
 :root {
-    --ohs-family-display: "BoldPxels.ttf", serif;
-    --ohs-family-text: "lora.regular.ttf", monospace;
+    --ohs-family-display: "BoldPixels", monospace;
+    --ohs-family-text: "Lora", Georgia, serif;
 
     --ohs-color-text: #222;
+    --ohs-color-beige: #FFEEB7;
+    --ohs-color-darkbeige: #C9B274;
     --ohs-color-pink: #EC008C;
     --ohs-color-blue: #398293;
-    --ohs-color-darkbeige: #C9B274;
 }
 
 /* Bulma customizations */
@@ -24,6 +41,13 @@
     --bulma-family-primary: var(--ohs-family-text);
     --bulma-text: var(--ohs-color-text);
     --bulma-text-strong: var(--ohs-color-text);
+    --bulma-scheme-main: var(--ohs-color-beige);
+    --bulma-body-background-color: var(--ohs-color-beige);
+}
+
+html,
+body {
+    background-color: var(--ohs-color-beige);
 }
 
 /* Global helpers */
@@ -76,12 +100,12 @@
 .content a {
     --ds-left: 0.05em;
     --ds-top: 0.4em;
-    --ds-bg: color-mix(0)
+    --ds-bg: color-mix(
         in srgb,
-        var(--drop-highlight-color, var(--ohs-color-pink) 50%,
+        var(--drop-highlight-color, var(--ohs-color-pink)) 50%,
         transparent
     );
-    background-color: #FFEEB7;
+    background-color: transparent;
     background-image: linear-gradient(var(--ds-bg), var(--ds-bg));
     background-size: 100% 100%;
     background-position: var(--ds-left) var(--ds-top);
