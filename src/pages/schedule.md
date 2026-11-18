@@ -7,7 +7,7 @@ title: Schedule
 
 ## Talks
 
-Talks will happen on **Friday, May 7, 2026**.
+Talks will happen on **Friday, May 7, 2027**.
 
 <a class="button is-large" href="/talks">Talks schedule</a>
 
