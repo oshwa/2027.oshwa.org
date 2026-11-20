@@ -14,7 +14,7 @@ export default {
     github: {
         url: "https://github.com/oshwa/2027.oshwa.org"
     },
-    timezone: "Europe/Barcelona",
+    timezone: "Europe/Madrid",
     nav: {
         // "Attend": "/attend",
         // "Schedule": "/schedule",

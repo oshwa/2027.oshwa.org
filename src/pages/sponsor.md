@@ -5,7 +5,7 @@ title: Sponsor
 
 # Sponsor OHS
 
-Barcelona, Spain ● May 7-8, 2026 ● BAU
+Barcelona, Spain ● May 7-8, 2027 ● BAU
 
 <blockquote>
     <p>The Open Hardware summit is the only conference dedicated to discussing Open Source Hardware. Open Source Hardware is a community-focused method of creating where we share knowledge openly, welcome collaboration, and frequently create together. The Open Hardware summit is a place to compare notes, see the state of the art, and spend some time talking about where the open source movement is headed. The summit often contains workshops, talks, connections, mentorship.</p>
@@ -19,11 +19,11 @@ Barcelona, Spain ● May 7-8, 2026 ● BAU
 
 ## What sets us apart
 
-Last year, our summit included over 1,800 participants in-person and virtually. We sold out of tickets, saw 24 companies participate through sponsorship, and the summit's social feeds have over 20K followers. We pride ourselves on bringing an inclusive experience to a highly diverse community. We put people with diverse backgrounds in charge, we ensure our call for talks is spread wide to equate to a diverse population of speakers, and we have an annual summit fellowship for people from diverse backgrounds to need travel funding to participate. We've got an incredible team of organizers, and planned what we anticipate will be the best Open Hardware summit yet. But we can't do it without your help.
+Last year, our summit included over 1,800 participants in-person and virtually. We sold out of tickets, saw 24 companies participate through sponsorship, and the summit's social feeds have over 20K followers. We pride ourselves on bringing an inclusive experience to a highly diverse community. We put people with diverse backgrounds in charge, we ensure our call for talks is spread wide to equate to a diverse population of speakers, and we have an annual summit fellowship for people from diverse backgrounds who need travel funding to participate. We've got an incredible team of organizers, and planned what we anticipate will be the best Open Hardware summit yet. But we can't do it without your help.
 
 The Open Source Hardware Association (OSHWA) organizes the Open Hardware summit and the open hardware community around shared values and principles. OSHWA certifies open source hardware designs, and shares data about our growing community. OSHWA's programs include the Open Hardware summit, the summit Fellowship program, Open Hardware Month in October, Certification, and it's all possible through donors like you and our membership.
 
-Please consider supporting open hardware this year. Your donation pays our staff, ensures a diverse program through our speakers and the summit Fellowship, and ultimately helps our community network and advance their goals. Since 2013, we've helped over 100 summit fellows by various funding mechanisms and is one of our most impactful programs. Our whole community helps our Fellows attend through ticket levels, kindness, and inclusion. We've seen summit Fellows grow into open hardware employees, business owners, and speakers at future summits through the support of our community, by individuals and businesses alike.
+Please consider supporting open hardware this year. Your donation pays our staff, ensures a diverse program through our speakers and the summit Fellowship, and ultimately helps our community network and advance their goals. Since 2013, we've helped over 100 summit fellows through various funding mechanisms, and it is one of our most impactful programs. Our whole community helps our Fellows attend through ticket levels, kindness, and inclusion. We've seen summit Fellows grow into open hardware employees, business owners, and speakers at future summits through the support of our community, by individuals and businesses alike.
 
 <blockquote class="is-quiet">
 The Open Hardware summit is hosted by the Open Source Hardware Association (OSHWA). OSHWA is recognized by the IRS as a 501(c)(3) tax-exempt public charity and donations to the Open Hardware summit are tax deductible to the extent permitted by law.
@@ -38,7 +38,7 @@ The Open Hardware summit is hosted by the Open Source Hardware Association (OSHW
 - A shout out and thank you on the OHSummit Twitter account.
 - You will be able to add one (1) item in the physical goodie bag.\*\*
 
-This level is intended for small companies who are under resourced, but still want to be represented.
+This level is intended for small companies who are under-resourced, but still want to be represented.
 
 **Supporter: $1,000 USD**
 
@@ -52,35 +52,35 @@ This level is intended for small companies who are under resourced, but still wa
 
 - Four (4) complimentary tickets to the summit.
 - Your logo will appear under "Enthusiast" on the summit website and on the central stage slide (used during breaks, at beginning and closing remarks).\*
-- A shout out and thank you on the OHSummit Twitter, Linked In, and Mastodon account.
+- A shout out and thank you on the OHSummit Twitter, LinkedIn, and Mastodon account.
 - You will be able to add one (1) item in the physical goodie bag.\*\*
 - You will be able to add one (1) item in the digital goodie bag.\*\*
 - An opportunity to have a demo table during the summit.
-* A branded discount code for sponsors to use with your communities.
+- A branded discount code for sponsors to use with your communities.
 
 **Fanatic: $5,000 USD**
 
 - Six (6) complimentary tickets.
 - Your logo will appear under "Fanatic" on the summit website and on the central stage slide (used during breaks, at beginning and closing remarks).\*
-- A shout out and thank you on the OHSummit Twitter, Linked In, and Mastodon account.
+- A shout out and thank you on the OHSummit Twitter, LinkedIn, and Mastodon account.
 - Personalized thank you slide in the sponsor rotation at the summit.
 - You will be able to add TWO items in the physical goodie bag.\*\*
 - You will be able to add TWO items in the digital goodie bag.\*\*
 - An opportunity to have a demo table during the summit.
-* A branded discount code for sponsors to use with your communities.
+- A branded discount code for sponsors to use with your communities.
 
 **Visionary: $10,000 USD**
 
 - Eight (8) complimentary tickets to the Open Hardware summit with reserved seating in
 the auditorium.
 - Your logo will appear under "Visionary" on the summit website and on the central stage slide (used during breaks, at beginning and closing remarks).\*
-- A shout out and thank you on the OHSummit Twitter, Linked In, and Mastodon account.
+- A shout out and thank you on the OHSummit Twitter, LinkedIn, and Mastodon account.
 - Personalized thank you slide in the sponsor rotation at the summit.
 - You will be able to add TWO items in the physical goodie bag.\*\*
 - You will be able to add TWO items in the digital goodie bag.\*\*
 - An opportunity to have a demo table during the summit.
 - Interview on the OHS YouTube.
-* A branded discount code for sponsors to use with your communities.
+- A branded discount code for sponsors to use with your communities.
 
 **Non-profit:**
 
@@ -111,7 +111,7 @@ Are you the librarians of sponsors?
 
 **Badge sponsor - 1 available**
 
-Would you like to have your logo on our badges, which sometimes light up, interact, or are made of Legos? We'd love to [hear from you](info@oshwa.org) for more information on this level! This *also* includes everything in the Visionary level sponsorship.
+Would you like to have your logo on our badges, which sometimes light up, interact, or are made of Legos? We'd love to [hear from you](mailto:info@oshwa.org) for more information on this level! This *also* includes everything in the Visionary level sponsorship.
 
 **$7,000 Lanyard sponsor - 1 available**
 
